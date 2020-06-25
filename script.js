@@ -26,7 +26,7 @@ $(document).ready(function(){
             hourDiv.text(businessHours[i]);
             rowDiv.append(hourDiv);
             var descriptionInput = $('<input type="textarea" class="description" id="' + businessHours[i] + '-input">');
-            //descriptionInput.val(localStorage.getItem(businessHours[i]));
+            descriptionInput.val(localStorage.getItem(businessHours[i]));
             rowDiv.append(descriptionInput);
             var saveBtn = $('<button class="saveBtn" id="' + businessHours[i] + '">');
             rowDiv.append(saveBtn);
@@ -54,13 +54,11 @@ $(document).ready(function(){
 
     $(document).on("click", ".saveBtn", function(event) {
         event.preventDefault();
-        //var testSelector = $(this).attr('id');
-        var testInput2 = $(this).siblings(".description").val();
-        //var inputId = "#" + testSelector + "-input";
-        //$(inputId).value("Lets see if this works");
-        //console.log(testSelector);
-        console.log(testInput2);
-        //localStorage.setItem("lastname", "Smith");
+        var inputValue = $(this).siblings(".description").val();
+        var timeValue = $(this).attr('id');
+        //console.log(inputValue);
+        //console.log(timeValue)
+        localStorage.setItem(timeValue, inputValue);
     });
 
     /*
