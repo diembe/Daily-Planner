@@ -30,6 +30,8 @@ $(document).ready(function(){
             rowDiv.append(descriptionInput);
             var saveBtn = $('<button class="saveBtn" id="' + businessHours[i] + '">');
             rowDiv.append(saveBtn);
+            var saveIcon = $('<i class="far fa-save"></i>');
+            saveBtn.append(saveIcon);
 
             if (i < adjustedHour) {
                 console.log(businessHours[i] + " is BEFORE the current time");
@@ -60,14 +62,6 @@ $(document).ready(function(){
         //console.log(timeValue)
         localStorage.setItem(timeValue, inputValue);
     });
-
-    /*
-    function saveDescription() {
-    }
-    */
-
-    // Store
-
 
 
 });
