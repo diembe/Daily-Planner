@@ -9,4 +9,4 @@ Daily Planner uses moment.js to show the current time, and format your daily cal
 
 
 
-![Daily Planner Screenshot](https://github.com/diembe/Daily-Planner/Assets/planner-screenshot-1.png)
+![Daily Planner Screenshot](https://raw.githubusercontent.com/diembe/Daily-Planner/master/Assets/planner-screenshot-1.png)
